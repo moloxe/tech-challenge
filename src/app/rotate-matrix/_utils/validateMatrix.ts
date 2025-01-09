@@ -1,5 +1,5 @@
 export function validateMatrix(stringMatrix: string) {
-  const ERROR_MESSAGE = "Error parsing matrix";
+  const ERROR_MESSAGE = "Error parsing matrix, please check the input.";
   let parsedMat;
   try {
     parsedMat = JSON.parse(stringMatrix);
