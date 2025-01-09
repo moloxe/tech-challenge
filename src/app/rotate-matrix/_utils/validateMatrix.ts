@@ -1,6 +1,11 @@
 export function validateMatrix(stringMatrix: string) {
   const ERROR_MESSAGE = "Error parsing matrix";
-  const parsedMat = JSON.parse(stringMatrix);
+  let parsedMat;
+  try {
+    parsedMat = JSON.parse(stringMatrix);
+  } catch {
+    throw new Error(ERROR_MESSAGE);
+  }
   const rows = parsedMat.length;
   if (typeof rows !== "number") throw new Error(ERROR_MESSAGE);
   const matrix: number[][] = new Array(rows).fill(0).map(() => []);
