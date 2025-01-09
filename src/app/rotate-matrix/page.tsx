@@ -1,25 +1,7 @@
-"use client";
-
-import MatrixForm from "./_components/MatrixForm";
-import MatrixView from "./_components/MatrixView";
-import useRotateMatrix from "./_hooks/useRotateMatrix";
+import MatrixPage from "./_components/MatrixPage";
 
 const RotateMatrixPage = () => {
-  const { error, handleChangeMatrix, matrix, rotateLeft } = useRotateMatrix();
-  return (
-    <div className="flex justify-center p-4 min-h-screen w-full">
-      <main className="flex flex-col w-full max-w-[500px] gap-4">
-        <MatrixForm
-          matrixIsLoaded={Boolean(matrix)}
-          handleChangeMatrix={handleChangeMatrix}
-        />
-        {error && (
-          <div className="text-sm text-red-600 dark:text-red-500">{error}</div>
-        )}
-        <MatrixView matrix={matrix} rotateLeft={rotateLeft} />
-      </main>
-    </div>
-  );
+  return <MatrixPage />;
 };
 
 export default RotateMatrixPage;
