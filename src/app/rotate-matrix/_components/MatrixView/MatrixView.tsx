@@ -31,7 +31,7 @@ const MatrixView: FC<Props> = ({ matrix, rotateLeft }) => {
       >
         Rotate Left
       </button>
-      <div className="flex">
+      <div className="inline-block">
         Output Matrix: <pre>{JSON.stringify(matrix)}</pre>
       </div>
     </div>
