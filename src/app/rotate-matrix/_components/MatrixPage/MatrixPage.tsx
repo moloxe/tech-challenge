@@ -14,7 +14,12 @@ const MatrixPage = () => {
           handleChangeMatrix={handleChangeMatrix}
         />
         {error && (
-          <div className="text-sm text-red-600 dark:text-red-500">{error}</div>
+          <div
+            className="text-sm text-red-600 dark:text-red-500"
+            aria-label="error-message"
+          >
+            {error}
+          </div>
         )}
         <MatrixView matrix={matrix} rotateLeft={rotateLeft} />
       </main>
