@@ -1,7 +1,6 @@
-import { expect, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Page from "../page";
-import { describe } from "node:test";
 
 describe("MatrixPage", () => {
   test("rotate the matrix to the left", async () => {
